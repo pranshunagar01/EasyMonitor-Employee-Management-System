@@ -5,10 +5,10 @@ import os
 app = Flask(__name__)
 
 credentials = ['admin', '12345']
-host_str = "flaskproj1.cdhgncql3r2k.us-east-2.rds.amazonaws.com"
+host_str = "host_name"
 app.config['MYSQL_HOST'] = host_str
-app.config['MYSQL_USER'] = 'pranshunagar01'
-app.config['MYSQL_PASSWORD'] = '*Ff5942453#'
+app.config['MYSQL_USER'] = 'username'
+app.config['MYSQL_PASSWORD'] = '*Password'
 app.config['MYSQL_DB'] = 'flask'
 app.config['SECRET_KEY'] = os.urandom(12).hex()
 mysql = MySQL(app)
