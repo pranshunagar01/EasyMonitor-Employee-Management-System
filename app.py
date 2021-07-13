@@ -5,11 +5,11 @@ import os
 app = Flask(__name__)
 
 credentials = ['admin', '12345']
-
-app.config['MYSQL_HOST'] = 'remotemysql.com'
-app.config['MYSQL_USER'] = 'KdWaBSo3YU'
-app.config['MYSQL_PASSWORD'] = 'wHEiPHCP2A'
-app.config['MYSQL_DB'] = 'KdWaBSo3YU'
+host_str = "flaskproj1.cdhgncql3r2k.us-east-2.rds.amazonaws.com"
+app.config['MYSQL_HOST'] = host_str
+app.config['MYSQL_USER'] = 'pranshunagar01'
+app.config['MYSQL_PASSWORD'] = '*Ff5942453#'
+app.config['MYSQL_DB'] = 'flask'
 app.config['SECRET_KEY'] = os.urandom(12).hex()
 mysql = MySQL(app)
 
@@ -109,7 +109,7 @@ def delete():
     if result_value > 0:
         data = cur.fetchall()
     if len(data) == 1:
-        flash("Can't delete the last record.")
+        flash("Deleting the last record is not allowed.")
         return redirect(url_for('home'))
     cur.execute("DELETE FROM employee WHERE employeeID = %s", [empID])
     mysql.connection.commit()
@@ -195,5 +195,4 @@ def page5(e):
     return redirect(url_for('login'))
 
 if(__name__) == "__main__":
-    app.debug = True
     app.run(debug = True)

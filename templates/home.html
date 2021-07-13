@@ -120,7 +120,7 @@
 </head>
 
 <body>
-    <a href="https://easymonitor.herokuapp.com/"><h1><i class="fab fa-pagelines"></i></h1></a>
+    <a href="http://127.0.0.1:5000/"><h1><i class="fab fa-pagelines"></i></h1></a>
     <p class="p2">EasyMonitor</p>
     <p class="p4">Employee Management System</p>
     <a href="https://github.com/pranshunagar01/easymonitor"><h1 class="h3"><i class="fab fa-github"></i></h1></a>
@@ -137,23 +137,23 @@
                 <td>{{i[1]}}</td>
                 <td>{{i[2]}}</td>
                 <td>{{i[3]}}</td>
-                <td><form action="https://easymonitor.herokuapp.com/delete" method="post"><button class="btnDel" value={{i[0]}} name="delBtn">Delete</button></form></td>
-                <td><form action="https://easymonitor.herokuapp.com/modify" method="post"><button  value={{i[0]}} name="modBtn">Modify</button></form></td>
+                <td><form action="http://127.0.0.1:5000/delete" method="post"><button class="btnDel" value={{i[0]}} name="delBtn">Delete</button></form></td>
+                <td><form action="http://127.0.0.1:5000/modify" method="post"><button  value={{i[0]}} name="modBtn">Modify</button></form></td>
             </tr>
         {% endfor %}
         
     </table>
-    <a class="a1" href="https://easymonitor.herokuapp.com/add"><button class="btn3">ADD NEW</button></a>
+    <a class="a1" href="http://127.0.0.1:5000/add"><button class="btn3">ADD NEW</button></a>
     <div class="dropdown">
         <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
           Sort by
         </a>
       
         <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-          <li><a class="dropdown-item" href="https://easymonitor.herokuapp.com/sortID">ID</a></li>
-          <li><a class="dropdown-item" href="https://easymonitor.herokuapp.com/sortName">Name</a></li>
-          <li><a class="dropdown-item" href="https://easymonitor.herokuapp.com/sortAge">Age</a></li>
-          <li><a class="dropdown-item" href="https://easymonitor.herokuapp.com/sortMail">Mail</a></li>
+          <li><a class="dropdown-item" href="http://127.0.0.1:5000/sortID">ID</a></li>
+          <li><a class="dropdown-item" href="http://127.0.0.1:5000/sortName">Name</a></li>
+          <li><a class="dropdown-item" href="http://127.0.0.1:5000/sortAge">Age</a></li>
+          <li><a class="dropdown-item" href="http://127.0.0.1:5000/sortMail">Mail</a></li>
         </ul>
       </div>
     {% with messages = get_flashed_messages() %}  
